@@ -11,7 +11,7 @@ st.set_page_config(page_title="מחולל קורות חיים AI", layout="cente
 st.title("📄 התאמת קורות חיים אישית")
 
 # --- הגדרות API ---
-API_KEY = API_KEY = st.secrets["AIzaSyDFhVo0sA0WQgn3GXhmgyKAIQK7khW5lT0"]
+API_KEY = API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=API_KEY)
 
 def run_ai_logic(cv_text, job_input):
