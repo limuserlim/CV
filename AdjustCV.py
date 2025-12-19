@@ -11,11 +11,11 @@ st.set_page_config(page_title="מחולל קורות חיים AI", layout="cente
 st.title("📄 התאמת קורות חיים אישית")
 
 # --- הגדרות API ---
-API_KEY = "AIzaSyDFhVo0sA0WQgn3GXhmgyKAIQK7khW5lT0"
+API_KEY = API_KEY = st.secrets["AIzaSyDFhVo0sA0WQgn3GXhmgyKAIQK7khW5lT0"]
 genai.configure(api_key=API_KEY)
 
 def run_ai_logic(cv_text, job_input):
-    model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
+    model = genai.GenerativeModel("gemini-2.0-flash")
     prompt = f"התאם את קורות החיים למודעה. השתמש רק במידע הקיים. עברית בלבד.\nCV: {cv_text}\nJob: {job_input}"
     
     # בדיקה אם מדובר בתמונה (Streamlit מעלה קבצים כ-Bytes)
