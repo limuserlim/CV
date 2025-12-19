@@ -15,7 +15,7 @@ API_KEY = API_KEY = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=API_KEY)
 
 def run_ai_logic(cv_text, job_input):
-    model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("models/gemini-2.0-flash-lite-preview-02-05")
     prompt = f"התאם את קורות החיים למודעה. השתמש רק במידע הקיים. עברית בלבד.\nCV: {cv_text}\nJob: {job_input}"
     
     # בדיקה אם מדובר בתמונה (Streamlit מעלה קבצים כ-Bytes)
